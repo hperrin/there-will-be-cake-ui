@@ -32,8 +32,12 @@
 
 
 // Text Colors
-@text-color:           #222;
-@text-color-subtle:    lighten(@text-color, 10%);
+@text-color:           #fff - @color-primary-2;
+@if (lightness(@text-color) > 50) {
+  @text-color-subtle:    darken(@text-color, 10%);
+} @else {
+  @text-color-subtle:    lighten(@text-color, 10%);
+}
 @text-color-highlight: @color-secondary-2-4;
 @text-color-selected:  @color-primary-4;
 
@@ -53,7 +57,7 @@
 @app-background-color:       lighten(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: #F9F9F9;
+@base-background-color: @color-primary-1;
 @base-border-color:     @color-primary-0;
 
 // Component colors
