@@ -5,39 +5,63 @@
 // Overrides: atom/static/variables/ui-variables.less
 
 // Color scheme can be found here: http://paletton.com/#uid=75x0u0kar++00Om5J++jHsL++e3
+@color-primary-0: #FFACB9;	/* Main Primary color */
+@color-primary-1: #F9F9F9;
+@color-primary-2: #FFD1D9;
+@color-primary-3: #D85368;
+@color-primary-4: #6A0011;
+
+@color-secondary-1-0: #FFCCAC;	/* Main Secondary color (1) */
+@color-secondary-1-1: #FFFFFF;
+@color-secondary-1-2: #FFE3D1;
+@color-secondary-1-3: #E58E58;
+@color-secondary-1-4: #702B00;
+
+@color-secondary-2-0: #ACFFEC;	/* Main Secondary color (2) */
+@color-secondary-2-1: #DBDBDB;
+@color-secondary-2-2: #D1FFF5;
+@color-secondary-2-3: #39947F;
+@color-secondary-2-4: #004838;
+
+@color-complement-0: #C2FFAC;	/* Main Complement color */
+@color-complement-1: #F0F0F0;
+@color-complement-2: #DEFFD1;
+@color-complement-3: #6CC44B;
+@color-complement-4: #1A6000;
+
 
 
 // Text Colors
 @text-color:           #222;
 @text-color-subtle:    lighten(@text-color, 10%);
-@text-color-highlight: #004838;
-@text-color-selected:  #6A0011;
+@text-color-highlight: @color-secondary-2-4;
+@text-color-selected:  @color-primary-4;
 
-@text-color-info:    #004838;
-@text-color-success: #1A6000;
-@text-color-warning: #702B00;
-@text-color-error:   #6A0011;
+@text-color-info:    @color-secondary-2-4;
+@text-color-success: @color-complement-4;
+@text-color-warning: @color-secondary-1-4;
+@text-color-error:   @color-primary-4;
 
 // Background colors
-@background-color-info:    #ACFFEC;
-@background-color-success: #C2FFAC;
-@background-color-warning: #FFCCAC;
-@background-color-error:   #FFACB9;
+@background-color-info:    @color-secondary-2-0;
+@background-color-success: @color-complement-0;
+@background-color-warning: @color-secondary-1-0;
+@background-color-error:   @color-primary-0;
 
-@background-color-highlight: #FFD1D9;
-@background-color-selected:  #FFACB9;
+@background-color-highlight: @color-primary-2;
+@background-color-selected:  @color-primary-0;
 @app-background-color:       lighten(@base-background-color, 5%);
 
 // Base colors
 @base-background-color: #F9F9F9;
-@base-border-color:     #FFACB9;
+@base-border-color:     @color-primary-0;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color:     @base-border-color;
 
-@input-background-color: #D1FFF5;
-@input-border-color:     #39947F;
+@input-background-color: @color-secondary-2-2;
+@input-border-color:     @color-secondary-2-3;
 
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
@@ -56,10 +80,10 @@
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @input-border-color;
 
-@tab-bar-background-color:    #FFD1D9;
+@tab-bar-background-color:    @color-primary-2;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: #FFE3D1;
+@tab-background-color-active: @color-secondary-1-2;
 @tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
