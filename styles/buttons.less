@@ -10,9 +10,14 @@
   background-color: @button-background-color;
 
   text-transform: @ui-text-transform;
-  height: @component-line-height + (@component-padding/2);
+  min-height: @component-line-height + (@component-padding/2);
   line-height: @component-line-height + (@component-padding/2);
   border: 1px solid @button-border-color;
+
+  &.btn-xs, &.btn-sm {
+    min-height: unset;
+    line-height: 1;
+  }
 
   &:hover,
   &:focus {
@@ -78,7 +83,11 @@
     border-left: 1px @button-border-color solid;
   }
 
-  &:last-child {
+  &:last-child, &.selected:last-child {
     border-right: 1px @button-border-color solid;
   }
+}
+
+.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+  margin-left: 0;
 }
