@@ -1,13 +1,14 @@
 {
-  "name": "ui-theme-template",
+  "name": "there-will-be-cake-ui",
   "theme": "ui",
-  "version": "0.0.0",
-  "description": "A short description of your UI theme",
+  "version": "1.0.0",
+  "description": "A light pink UI theme",
   "keywords": [
     "ui",
-    "theme"
+    "theme",
+    "pink"
   ],
-  "repository": "https://github.com/atom-community/ui-theme-template",
+  "repository": "https://github.com/hperrin/there-will-be-cake-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -21,7 +21,12 @@
 // Used on top of the editor, like the Command Palette.
 
 atom-panel.modal {
-  border: 1px solid @overlay-border-color;
+  border: 1px solid #F9F9F9;
   border-top: none;
-  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  box-shadow: 0px 5px 18px 12px rgba(0,0,0,0.15);
+}
+
+atom-panel-container.bottom:before {
+  box-shadow: 0px 5px 18px 12px rgba(0,0,0,0.15);
+  z-index: 3;
 }

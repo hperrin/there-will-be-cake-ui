@@ -9,6 +9,25 @@
   background-color: @tab-bar-background-color;
   border-bottom: 1px solid @base-border-color;
 
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    height: 1px;
+    background-color: @base-border-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #E58E58;
+  }
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-corner,
+  &::-webkit-resizer,
+  &::-webkit-scrollbar-track-piece {
+    display: none;
+  }
+
   .tab {
     color: @text-color;
     height: @tab-height;
@@ -16,18 +35,33 @@
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    min-width: 8rem;
+    max-width: 17rem;
+
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
+
+      min-width: 11rem;
+    }
+
+    &:only-child {
+      max-width: 100%;
     }
 
 
     // Modified Icon (the blue circle) -------------------
     &.modified:not(:hover) .close-icon {
       top: 50%;
-      right: @component-padding + 4px; // 4px -> half of icon size
+      // right: @component-padding + 4px; // 4px -> half of icon size
       margin-top: -3px;
       border-color: @text-color-info;
+
+      display: block;
     }
     &.modified:hover .close-icon {
       color: currentColor;
@@ -35,6 +69,12 @@
 
 
     // Close Icon (the X) -------------------
+    .close-icon {
+      display: none;
+    }
+    &:hover .close-icon {
+      display: block;
+    }
     .close-icon:hover {
       color: @text-color-selected;
     }

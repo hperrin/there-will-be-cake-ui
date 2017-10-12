@@ -20,3 +20,36 @@ atom-pane {
     border-right: none;
   }
 }
+
+.atom-dock-resize-handle {
+  background-color: @base-border-color;
+}
+
+.preview-pane .preview-header {
+  background-color: @base-background-color;
+}
+
+.settings-view {
+  .section {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &:first-child, &:last-child {
+      padding: 40px;
+    }
+
+    .section-heading {
+      text-transform: @ui-text-transform;
+    }
+  }
+
+  .config-menu {
+    text-transform: @ui-text-transform;
+  }
+}
+
+li[data-type="SettingsView"],
+li[data-type="ResultsPaneView"],
+li[data-type="TreeView"] {
+  text-transform: @ui-text-transform;
+}
