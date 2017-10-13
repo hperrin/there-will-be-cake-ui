@@ -18,8 +18,12 @@
     min-height: unset;
     line-height: 1;
   }
+  &[disabled] {
+    background-color: @base-background-color;
+    color: @text-color-subtle;
+  }
 
-  &:hover,
+  &:hover:not([disabled]),
   &:focus {
     color: @text-color-highlight;
     background-color: @button-background-color-hover;
