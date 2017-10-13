@@ -2,7 +2,7 @@
   "name": "there-will-be-cake-ui",
   "theme": "ui",
   "version": "1.0.0",
-  "description": "A light pink UI theme",
+  "description": "Do you want some cake?",
   "keywords": [
     "ui",
     "theme",
@@ -12,5 +12,19 @@
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
+  },
+  "configSchema": {
+    "colorScheme": {
+      "title": "Color Scheme",
+      "description": "What kind of cake do you like?",
+      "type": "string",
+      "default": "Strawberry Shortcake",
+      "enum": [
+        "Strawberry Shortcake",
+        "Vanilla",
+        "Chocolate"
+      ],
+      "order": 1
+    }
   }
 }
