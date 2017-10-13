@@ -6,12 +6,13 @@
 // Overrides: atom/tabs
 
 .tab-bar {
-  background-color: @tab-bar-background-color;
+  // background-color: @tab-bar-background-color;
   border-bottom: 1px solid @base-border-color;
 
   overflow-x: scroll;
   overflow-y: hidden;
-  box-shadow: inset 0px -10px 30px 0px rgba(255,255,255,.1);
+  background: linear-gradient(180deg, darken(@tab-bar-background-color, 5%), @tab-bar-background-color);
+  // box-shadow: inset 0px -10px 30px 0px rgba(0,0,0,.2);
 
   &::-webkit-scrollbar,
   &::-webkit-scrollbar-thumb {
@@ -46,9 +47,10 @@
 
     &.active {
       color: @text-color-selected;
-      background-color: @tab-background-color-active;
+      // background-color: @tab-background-color-active;
 
       min-width: 11rem;
+      background: linear-gradient(180deg, @tab-background-color-active, darken(@tab-background-color-active, 5%));
     }
 
     &:only-child {

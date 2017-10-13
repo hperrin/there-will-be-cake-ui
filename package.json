@@ -22,10 +22,13 @@
       "enum": [
         "Strawberry Shortcake",
         "Vanilla",
-        "Chocolate"
+        "Chocolate",
+        "Mint",
+        "Red Velvet",
+        "Birthday"
       ],
       "order": 1
     }
   },
-  "main": "lib/main",
+  "main": "lib/main"
 }

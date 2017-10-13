@@ -33,7 +33,7 @@
 @app-background-color:       lighten(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: @color-primary-1;
+@base-background-color: lighten(@color-primary-1, (100 - lightness(@text-color)) / 2);
 @base-border-color:     @color-primary-0;
 
 // Component colors
