@@ -23,11 +23,36 @@
         "Strawberry Shortcake",
         "Vanilla",
         "Chocolate",
+        "Carrot",
         "Mint",
         "Red Velvet",
-        "Birthday"
+        "Birthday",
+        "Grape I Guess"
       ],
       "order": 1
+    },
+    "font": {
+      "title": "Font",
+      "description": "What font would you like your icing message in?",
+      "type": "string",
+      "default": "No Change",
+      "enum": [
+        "No Change",
+        "Arial",
+        "Helvetica",
+        "Times New Roman",
+        "Times",
+        "Courier New",
+        "Verdana",
+        "Georgia",
+        "Palatino",
+        "Garamond",
+        "Bookman",
+        "Comic Sans MS",
+        "Trebuchet MS",
+        "Impact"
+      ],
+      "order": 2
     }
   },
   "main": "lib/main"

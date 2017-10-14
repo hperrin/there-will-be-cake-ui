@@ -1,15 +1,20 @@
 fs = require 'fs'
+root = document.documentElement
 
 module.exports =
   activate: (state) ->
     atom.config.observe 'there-will-be-cake-ui.colorScheme', (value) ->
       setColorScheme(value)
 
+    atom.config.observe 'there-will-be-cake-ui.font', (value) ->
+      setFont(value)
+
   deactivate: ->
     unsetColorScheme()
+    unsetFont()
 
 
-# Color Scheme -----------------------
+# Color Scheme
 
 setColorScheme = (colorScheme) ->
   schemeFile = colorScheme.toLowerCase().replace(/ /g, '-')
@@ -20,3 +25,12 @@ setColorScheme = (colorScheme) ->
 
 unsetColorScheme = ->
   setColorScheme('strawberry-shortcake')
+
+
+# Font
+
+setFont = (font) ->
+  root.setAttribute('theme-there-will-be-cake-ui-font', font.toLowerCase().replace(/ /g, '-'))
+
+unsetFont = ->
+  root.removeAttribute('theme-there-will-be-cake-ui-font')

@@ -1,3 +1,3 @@
 # There Will Be Cake Atom UI Theme
 
-A light pink UI theme. Easy on the eyes. Includes better tab sizing.
+Do you want some cake? A light colored UI theme, with various color schemes. Easy on the eyes. Includes better tab sizing.
